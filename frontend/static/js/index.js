@@ -33,7 +33,6 @@ const router = async () => {
     { path: "/Person", view: Person },
   ];
 
-  // Test each route for potential match
   const potentialMatches = routes.map((route) => {
     return {
       route: route,

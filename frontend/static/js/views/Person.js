@@ -57,7 +57,7 @@ export default class extends AbstractView {
       .join("");
 
     return `
-      <div class="personContainer">${result}</div>
+      <div class="personContainer"><div class="person">${result}</div></div>
       ${modals}
     `;
   }

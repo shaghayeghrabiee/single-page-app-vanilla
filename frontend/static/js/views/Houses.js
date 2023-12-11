@@ -28,38 +28,6 @@ export default class extends AbstractView {
     }
   }
 
-  // async handleSearch() {
-  //   return new Promise((resolve, reject) => {
-  //     const input = document.querySelector("#searchHouse");
-  //     const inputBtn = document.querySelector("#searchBtn");
-  //     const clearBtn = document.querySelector("#clearBtn");
-  //     let searchTerm = "";
-
-  //     input.addEventListener("input", (e) => {
-  //       searchTerm = e.target.value;
-  //     });
-
-  //     inputBtn.addEventListener("click", async () => {
-  //       try {
-  //         const result = await this.getHouse(searchTerm.toLowerCase());
-  //         resolve(result);
-  //       } catch (error) {
-  //         reject(error);
-  //       }
-  //     });
-  //     clearBtn.addEventListener("click", async () => {
-  //       try {
-  //         input.value = "";
-  //         const result = await this.fetchData();
-  //         this.renderHouses(result);
-  //         resolve(result);
-  //       } catch (error) {
-  //         reject(error);
-  //       }
-  //     });
-  //   });
-  // }
-
   async renderHouses(houses) {
     let result = "";
     houses.map((house) => {
@@ -101,7 +69,9 @@ export default class extends AbstractView {
                               <button id="searchBtn">Search</button>
                               <button id="clearBtn">clear</button>
                             </div>
-                            <div class="houseContainer">${result}</div>
+                         
+                                <div class="houseContainer">${result}</div>
+                          
                             <div class="searchResult"></div>
                           </div>`;
 

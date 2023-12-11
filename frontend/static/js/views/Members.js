@@ -1,5 +1,4 @@
 import AbstractView from "./AbstractView.js";
-// import {membersImg} from "../../css/members.jpeg";
 
 export default class extends AbstractView {
   constructor(params) {
