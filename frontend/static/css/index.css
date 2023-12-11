@@ -1,0 +1,409 @@
+:root {
+  --mainWhite: rgba(255, 255, 255, 0.7);
+  --mainBlack: #292f36;
+  --mainGrey: rgb(216, 214, 214);
+  --quotes:rgb(0, 0, 0,0.5);
+  --Gold:#FFD700;
+  --shadow:0 4px 18px 0 rgba(0, 0, 0, 0.25)
+}
+body {
+  margin: 0 0 0 var(--nav-width);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  min-height: 100vh;
+}
+.navigation-header {
+  background-color:var(--mainBlack);
+  padding: 0 15px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-items {
+  display: flex;
+  gap: 40px;
+}
+.navigation-items > a {
+  color: var(--Gold);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: .4s ease-in-out;
+}
+.navigation-items > a:hover {
+  color: white;
+}
+
+.containerHouse{
+  position: relative;
+}
+.containerHouse::before {    
+  content: "";
+  background: url(../css/BG.jpeg) center/cover fixed no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.4;
+  z-index: -1;
+  min-height: 100vh;
+}
+.houseContainer{
+  display: grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-gap: 15px;
+  padding: 40px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchHouse{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.searchHouse button{
+  height: 50px;
+  background-color: var(--mainBlack);
+  color: var(--Gold);
+  cursor: pointer;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 10px;
+}
+.searchHouse input{
+  margin:20px 0px;
+  width: 30%;
+  height: 50px;
+  border: 1px solid var(--mainBlack);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-color: transparent;
+  color: var(--Gold);
+  font-size: large;
+}
+.searchHouse input::placeholder{
+  color: var(--mainBlack);
+}
+
+#app {
+   align-items: center;
+   justify-content: center;
+    position: relative;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.card {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 150px;
+ height: 120px;
+ border-radius: 20px;
+ background: #f5f5f5;
+ position: relative;
+ padding: 1.8rem;
+ border: 2px solid #c3c6ce;
+ transition: 0.5s ease-out;
+ overflow: visible;
+ margin: 15px;
+ 
+}
+.card-button {
+ text-align: center;
+ transform: translate(-50%, 125%);
+ width: 40%;
+ border-radius: 1rem;
+ border: none;
+ background-color: var(--mainBlack);
+ color: var(--Gold);
+ font-size: 1rem;
+ padding: .5rem 1rem;
+ position: absolute;
+ left: 50%;
+ bottom: 0;
+ opacity: 0;
+ transition: 0.3s ease-out;
+ text-decoration: none;
+}
+/*Hover*/
+.card:hover {
+ border-color:var(--mainBlack);;
+ box-shadow: var(--shadow);
+}
+
+.card:hover .card-button {
+ transform: translate(-50%, 50%);
+ opacity: 1;
+}
+/*-------Memebers---------*/
+.memberContainer{
+    margin: 30px;
+}
+.memberContainer > ul{
+    list-style-type:none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.membersImg{
+    background:url(../css/members.jpeg) center/cover fixed no-repeat;
+    max-width: 100%;
+    height: 250px;
+}
+.member{
+    display: flex;
+    width: 150px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color:var(--mainGrey) ;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+    margin: 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+}
+/*-------End Memebers---------*/
+/*-------Person---------------*/
+.PersonMembers{
+  margin: 10px;
+  border: 1px solid var(--mainBlack);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-color: var(--mainWhite);
+   width:150px;
+   cursor: pointer;
+   text-align: center;
+}
+.PersonMembers:hover{
+  background-color:var(--mainBlack);
+  color: var(--Gold);
+}
+.personContainer{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4,2fr);
+}
+.personContainer::before {    
+  content: "";
+  background: url(../css/members.jpeg) center/cover fixed no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.4;
+  z-index: -1;
+}
+#replaceQuotes{
+  background-color: var(--mainBlack);
+  color: var(--Gold);
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+}
+/**************Modal*******************/
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  top:0;
+  left:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+  .open {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+  .modal-bg {
+    position: absolute;
+    background:rgba(11, 11, 11, 0.7) ;
+    width: 100%;
+    height: 100%;
+  }
+  .modal-container {
+    border-radius: 10px;
+    background: #fff;
+    position: relative;
+    padding: 30px;
+  }
+  .modal-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    outline: none;
+    appearance: none;
+    color:  var(--mainBlack);
+    background: none;
+    border: 0px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+/***********Quotes********************/
+.quote{
+  width:60vw;
+  box-shadow: var(--shadow);
+  height: fit-content;
+  padding: 20px;
+  background: linear-gradient(var(--mainGrey),var(--mainWhite));
+  color: var(--mainBlack);
+  margin: 30px;
+  border: 1px solid var(--mainGrey);
+  padding: 10px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: grow-left cubic-bezier(0.785, 0.5, 0.15, 0.86) 1s forwards;
+  animation-delay: 1s;
+  -webkit-animation: grow-left cubic-bezier(0.785, 0.5, 0.15, 0.86) 1s forwards;
+}
+
+@keyframes grow-left {
+  from {
+    transform: scaleX(0);
+  }
+ to {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+}
+}
+
+.quoteContainer{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.quoteContainer::before{
+  content: "";
+  position: absolute;
+  background: url(../css/saw.jpg) center/cover fixed no-repeat;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.4;
+  z-index: -1;
+}
+.quoteContainer button{
+  background-color: var(--mainBlack);
+  color: var(--Gold);
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+/*****************Media Queries****************/
+@media only screen and (max-width: 820px) {
+  .houseContainer{
+      display:grid;
+      grid-template-columns: repeat(2, 5fr);
+  }
+  .houseContainer .card{
+   width: 100px;
+    height: 100px;
+  }
+   .memberContainer > ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0px;
+    }
+  .membersImg{
+    background:url(../css/members.jpeg) center/cover no-repeat fixed;
+    max-width:100%;
+    min-height: 100%;
+  }
+  .personContainer{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 540px) {
+
+    .houseContainer{
+        display:grid;
+        grid-template-columns: repeat(2, 5fr);
+    }
+    #searchHouse{
+      margin-left:0;
+    }
+     .membersImg{
+        display: none;
+    }
+    .memberContainer > ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0px;
+    }
+    .member{
+        width: 120px;
+    }
+      .nav__link {
+      color: var(--Gold);
+      text-decoration: none;
+  }
+  .personContainer{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
