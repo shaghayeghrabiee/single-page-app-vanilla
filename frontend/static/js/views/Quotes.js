@@ -36,25 +36,6 @@ export default class extends AbstractView {
     </div>
         `;
   }
-  // async onViewReady() {
-  //   const randomQuoteBTN = document.querySelector("#quoteBTN");
-  //   randomQuoteBTN.addEventListener("click", async () => {
-  //     const quotes = await this.getQuotes();
-  //     const quotesContainer = document.querySelector(".quoteContainer>div");
-
-  //     let html = "";
-  //     quotes.forEach((quote) => {
-  //       html += `
-  //         <div class="quote" id="quote">
-  //           <h3>${quote.character.name}</h3>
-  //           <p>${quote.sentence}</p>
-  //         </div>
-  //         `;
-  //     });
-
-  //     quotesContainer.innerHTML = html;
-  //   });
-  // }
   async randomQuote() {
     const quoteBtn = document.querySelector("#quoteBTN");
     quoteBtn.addEventListener("click", async () => {
