@@ -79,6 +79,7 @@ nav {
   align-items: center;
   
 }
+
 .searchHouse button{
   height: 50px;
   background-color: var(--mainBlack);
@@ -360,10 +361,16 @@ nav {
   -o-border-radius: 10px;
 }
 /*****************Media Queries****************/
+@media only screen and (max-width: 912px) {
+.houseContainer{
+      display:grid;
+      grid-template-columns: repeat(3, 2fr);
+  }
+}
 @media only screen and (max-width: 820px) {
   .houseContainer{
       display:grid;
-      grid-template-columns: repeat(2, 5fr);
+      grid-template-columns: repeat(3, 2fr);
   }
   .houseContainer .card{
    width: 100px;
@@ -386,14 +393,25 @@ nav {
   }
 }
 @media only screen and (max-width: 540px) {
-
+  .houseContainer .card{
+    width: 230px;
+    height: 100px;
+  }
+  .handleSmallScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
     .houseContainer{
         display:grid;
-        grid-template-columns: repeat(2, 5fr);
+        grid-template-columns: repeat(1, 2fr);
     }
     #searchHouse{
       margin-left:0;
     }
+    .searchHouse input::placeholder{
+      font-size: 12px;
+  }
      .membersImg{
         display: none;
     }
@@ -414,4 +432,21 @@ nav {
     grid-template-columns: repeat(2,1fr);
   }
 }
-
+@media only screen and (max-width: 390px) {
+  .houseContainer .card{
+    width: 180px;
+    height: 100px;
+  }
+  .handleSmallScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .houseContainer{
+        display:grid;
+        grid-template-columns: repeat(1, 2fr);
+    }
+    .searchHouse input::placeholder{
+      font-size: 12px;
+  }
+}

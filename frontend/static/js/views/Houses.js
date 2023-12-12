@@ -64,15 +64,12 @@ export default class extends AbstractView {
       });
 
       const htmlContent = `<div class="containerHouse">
-                            <div class="searchHouse">
-                              <input  type="text" id="searchHouse" placeholder="Search for a house..."/>
-                              <button id="searchBtn">Search</button>
-                              <button id="clearBtn">clear</button>
-                            </div>
-                         
-                                <div class="houseContainer">${result}</div>
-                          
-                            <div class="searchResult"></div>
+                              <div class="searchHouse">
+                                <input  type="text" id="searchHouse" placeholder="Search for a house..."/>
+                                <button id="searchBtn">Search</button>
+                                <button id="clearBtn">clear</button>
+                              </div>
+                              <div class="handleSmallScreen"><div class="houseContainer">${result}</div></div>
                           </div>`;
 
       return htmlContent;
@@ -91,7 +88,7 @@ export default class extends AbstractView {
     searchBtn.addEventListener("click", async () => {
       try {
         const result = await this.getHouse(input.value.toLowerCase());
-        const searchResultContainer = document.querySelector(".searchResult");
+        const searchResultContainer = document.querySelector(".houseContainer");
         searchResultContainer.innerHTML = "";
         this.renderHouses(result); 
       } catch (error) {
@@ -103,7 +100,7 @@ export default class extends AbstractView {
       try {
         input.value = "";
         const result = await this.fetchData();
-        const searchResultContainer = document.querySelector(".searchResult");
+        const searchResultContainer = document.querySelector(".houseContainer");
         searchResultContainer.innerHTML = "";
         this.renderHouses(result);
       } catch (error) {
